@@ -1,10 +1,10 @@
 {
-  "name": "Karreportal",
+  "name": "Weekli",
   "version": "1.0.0",
-  "description": "Testar utveckla en egen liten portal",
+  "description": "Weekly menuplanner and personal recipe repository.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cornflourblue/mean-stack-registration-login-example.git"
+    "url": "https://github.com/JonathanKarstrom/weekli"
   },
   "dependencies": {
     "angular": "^1.6.2",
