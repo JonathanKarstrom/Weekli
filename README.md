@@ -1,2 +1,5 @@
-# Weekli
-Web Application to plan and organize your favorite food recipies. You can easily create a account and then store your favorite recipes and let the application create a weekly menu for you complete with shopping lists. This app uses heroku to build and distribute.
+# mean-stack-registration-login-example
+
+MEAN Stack User Registration and Login Example Application
+
+To see a demo and further details go to http://jasonwatmore.com/post/2015/12/09/MEAN-Stack-User-Registration-and-Login-Example.aspx
