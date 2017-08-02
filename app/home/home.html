@@ -1,0 +1,46 @@
+<div ng-init="getRecipes()">
+    <h2>Veckomeny</h2>
+    <div ng-repeat="days in week">
+        <div class="col-md-9">
+            <div class="well">
+                <a href="" ng-click="setCourse($index)"><span
+                        class="glyphicon glyphicon-refresh"></span>
+                </a>
+                <h2 style="text-transform: capitalize;">{{days.day}}</h2>
+
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Maträtt</th>
+                        <th>Tidsåtgång</th>
+                        <th>Taggar</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><h4>{{days.course.name}}</h4></td>
+                        <td><h4>{{days.course.time}} min</h4></td>
+                        <td>
+                            <select multiple ng-model="week[$index].tags">
+                                <option ng-click="setTags($parent.$index)" ng-repeat="x in tags" value="{{x}}">{{x}}
+                                </option>
+                            </select>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-offset-9">
+        <div class="well">
+            <h4>Veckosedel</h4>
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="days in week">{{days.day}}: {{days.course.name}}</li>
+            </ul>
+            <div align="center">
+                <button class="btn btn-primary" ng-click="initController()">Uppdatera alla dagar</button>
+            </div>
+        </div>
+    </div>
+</div>

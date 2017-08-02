@@ -1,0 +1,69 @@
+<h2>Lägg till recept</h2>
+<div class="col-10-md">
+    <div class="well">
+        <div style="padding:10px">
+            <form>
+                <div class="form-group">
+                    <p>Maträtt:</p>
+                    <label for="name">Namn:</label>
+                    <input type="text" class="form-control" id="name" ng-model="name">
+                    <label for="name">Tidåtgång:</label>
+                    <input type="number" class="form-control" id="time" ng-model="time">
+                    <label for="tags">Taggar:</label>
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" ng-click="addTag()">+</button>
+                        </span>
+                        <input type="text" class="form-control" id="tags" ng-model="tag">
+                    </div>
+                    <div ng-repeat="tag in tags track by $index">
+                        <div class="col-md-2">
+                            <div class="alert alert-success">
+                                <a href="" class="close" ng-click="removeTag($index)">&times;</a>
+                                {{tag}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-inline">
+                    <p>Ingredienser:</p>
+                    <label for="ingredient-name">Namn:</label>
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" type="button" ng-click="addIngredient()">+</button>
+                        </span>
+                        <input type="text" class="form-control" id="ingredient-name" ng-model="ingredient.name">
+                    </div>
+                    <label for="ingredient-amount">Mängd:</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="ingredient-amount" ng-model="ingredient.amount">
+                    </div>
+                    <label for="ingredient-unit">Enhet:</label>
+                    <div class="input-group">
+                        <select class="form-control" id="ingredient-unit" ng-model="ingredient.unit">
+                            <option value="l">liter</option>
+                            <option value="dl">deciliter</option>
+                            <option value="msk">matsked</option>
+                            <option value="tsk">tesked</option>
+                            <option value="g">gram</option>
+                            <option value="st">styck</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div ng-repeat="x in ingredients track by $index">
+                    <div class="col-md-2">
+                        <div class="alert alert-success">
+                            <a href="" class="close" ng-click="removeIngredient($index)">&times;</a>
+                            {{x.name}} {{x.amount}} {{x.unit}}
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <button ng-click="addTag()" type="submit" class="btn btn-primary">Lägg
+                    till
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

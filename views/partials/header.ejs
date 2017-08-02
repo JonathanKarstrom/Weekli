@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Weekli - Startsida</title>
+    <link rel="stylesheet" href="https://bootswatch.com/yeti/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        body {
+            padding-top: 100px;
+        }
+
+        .form-container {
+            width: 400px;
+            margin: auto;
+        }
+
+        .credits {
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
+            padding-top: 20px;
+        }
+        .btn-primary {
+            background-color: seagreen;
+
+        }
+
+        .navbar-default {
+            background-color: seagreen;
+            -webkit-box-shadow: 8px 9px 14px -4px rgba(97, 96, 97, 0.44) !important;
+            -moz-box-shadow: 8px 9px 14px -4px rgba(97, 96, 97, 0.44) !important;
+            box-shadow: 8px 9px 14px -4px rgba(97, 96, 97, 0.44) !important;
+        }
+
+        body {
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+            <nav class="navbar navbar-default navbar-fixed-top" ng-init="getZodiacs()">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Weekl:</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#/">Hem </a></li>
+                        <li><a href="#/recipes">Om Weekli</a></li>
+                        <li><a href="#/addrecipe">Funktioner</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+				        <li><a href="" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span>   Logga in</a></li>
+			         </ul>
+                </div>
+            </div>
+        </nav>

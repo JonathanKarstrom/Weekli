@@ -1,0 +1,11 @@
+<div class="well" ng-init="getRecipes()">
+    <h2>Shoppinglista</h2>
+    <div ng-repeat="days in week">
+        <div ng-repeat="x in days.course.ingredients">
+            <input type="checkbox" id="cb_1" value="cb_val" name="cb_name">
+            <label for="cb_1">
+                {{x.amount}} {{x.unit}} {{x.name}}
+            </label>
+        </div>
+    </div>
+</div>

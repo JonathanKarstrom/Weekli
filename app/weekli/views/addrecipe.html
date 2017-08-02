@@ -1,0 +1,41 @@
+<div class="well">
+    <h2>Lägg till recept</h2>
+    <div style="padding:10px">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="name">Namn:</label>
+                <input type="text" class="form-control" id="name" ng-model="name">
+                <label for="name">Tidåtgång:</label>
+                <input type="number" class="form-control" id="time" ng-model="time">
+                <label for="tags">Taggar:</label>
+                <input type="text" class="form-control" id="tags" ng-model="tag">
+                <button class="btn btn-primary" ng-click="addTag()">+</button>
+                <div ng-repeat="tag in tags track by $index">
+                    {{tag}}
+                    <button class="btn btn-primary" ng-click="removeTag($index)">-</button>
+                </div>
+                <label for="ingredient-name">Ingrediens:</label>
+                <input type="text" class="form-control" id="ingredient-name" ng-model="ingredient.name">
+                <label for="ingredient-amount">Mängd:</label>
+                <input type="number" class="form-control" id="ingredient-amount" ng-model="ingredient.amount">
+                <label for="ingredient-unit">Enhet:</label>
+                <select class="form-control" id="ingredient-unit" ng-model="ingredient.unit">
+                    <option value="l">liter</option>
+                    <option value="dl">deciliter</option>
+                    <option value="msk">matsked</option>
+                    <option value="tsk">tesked</option>
+                    <option value="g">gram</option>
+                    <option value="st">styck</option>
+                </select>
+                <button class="btn btn-primary" ng-click="addIngredient()">+</button>
+                <div ng-repeat="x in ingredients track by $index">
+                    {{x.name}} {{x.amount}} {{x.unit}}
+                    <button class="btn btn-primary" ng-click="removeIngredient($index)">-</button>
+                </div>
+
+            </div>
+            <button ng-click="addTag(); addIngredient(); addRecipe();" type="submit" class="btn btn-primary">Lägg till
+            </button>
+        </form>
+    </div>
+</div>

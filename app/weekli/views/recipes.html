@@ -1,0 +1,22 @@
+<div ng-init="getRecipes()">
+    <div class="well">
+        <h2>Recept</h2>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Maträtt</th>
+                <th>Tidsåtgång</th>
+                <th>Ingredienser</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="rows in recipes | filter: tagFilter">
+                <td>{{rows.name}}</td>
+                <td>{{rows.time}} min</td>
+                <td><p ng-repeat="x in rows.ingredients">{{x.amount}} {{x.unit}} {{x.name}}</p></td>
+            </tr>
+            </tbody>
+        </table>
+        <a href="#/addrecipe" class="btn btn-primary">Lägg till recept</a>
+    </div>
+</div>

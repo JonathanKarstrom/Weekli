@@ -1,0 +1,43 @@
+body {
+    padding: 20px 0;
+}
+
+.flash-message {
+    margin-top: 20px;
+}
+
+.stopWatch {
+    padding: 5px;
+    background: linear-gradient(top, #222, #eee);
+    border: 7px solid #efefef;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px auto;
+    width:160px;
+}
+
+.numbers {
+    font-size: 30px;
+    line-height: 40px;
+    font-family: 'Orbitron', sans-serif;
+    color: black;
+    text-align:center;
+}
+
+
+.container {
+    padding: 5px;
+    text-align: left;
+}
+
+.boxis {
+    display:block;
+    float:left;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+body { padding-top: 50px; }
+@media screen and (max-width: 768px) {
+    body { padding-top: 30px; }
+}

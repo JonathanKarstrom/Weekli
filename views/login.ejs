@@ -1,0 +1,52 @@
+<%- include('partials/header') %>
+<div class="page-header">
+  <div class="jumbotron">
+      <div class="container">
+        <h1>Weekl:</h1>
+        <p>Vad ska vi äta?</p>
+      </div>
+    </div>
+</div>
+<div class="container">
+<h2>Content</h2>
+</div>
+
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="form-container">
+    <h2>Logga in</h2>
+    <% if(locals.error) { %>
+        <div class="alert alert-danger"><%= error %></div>
+    <% } %>
+    <% if(locals.success) { %>
+        <div class="alert alert-success"><%= success %></div>
+    <% } %>
+    <form method="post">
+        <div class="form-group">
+            <label for="username">Användarnamn</label>
+            <input type="text" name="username" id="username" value="<%= locals.username || '' %>" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="password">Lösenord</label>
+            <input type="password" name="password" id="password" class="form-control" />
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Logga in</button>
+            <a href="/register" class="btn btn-link">Registera dig</a>
+        </div>
+    </form>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Stäng</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<%- include('partials/footer') %>

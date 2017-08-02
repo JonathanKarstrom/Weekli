@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weekli - Veckomeny</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.ico"/>
+
+    <!-- Global scripts -->
+    <!-- Load global scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <link rel="stylesheet" href="https://bootswatch.com/yeti/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Load local scripts -->
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div ng-app="myApp" ng-controller="mainCtrl" ng-init="getRecipes()">
+    <div class="container">
+        <nav class="navbar navbar-default navbar-fixed-top" ng-init="getZodiacs()">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Weekl:</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#/">Hem </a></li>
+                        <li><a href="#/recipes">Recept</a></li>
+                        <li><a href="#/addrecipe">Lägg till recept</a></li>
+                        <li><a href="#/shoppinglist">Shoppinglista</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div ng-view></div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+

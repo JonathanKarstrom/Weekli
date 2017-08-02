@@ -1,0 +1,51 @@
+
+
+.well {
+    -webkit-box-shadow: 8px 9px 14px -4px rgba(97, 96, 97, 0.44) !important;
+    -moz-box-shadow: 8px 9px 14px -4px rgba(97, 96, 97, 0.44) !important;
+    box-shadow: 8px 9px 14px -4px rgba(97, 96, 97, 0.44) !important;
+
+}
+
+.container.drop-shadow {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.btn-primary {
+    background-color: seagreen;
+
+}
+
+.navbar-default {
+    background-color: seagreen;
+    -webkit-box-shadow: 8px 9px 14px -4px rgba(97, 96, 97, 0.44) !important;
+    -moz-box-shadow: 8px 9px 14px -4px rgba(97, 96, 97, 0.44) !important;
+    box-shadow: 8px 9px 14px -4px rgba(97, 96, 97, 0.44) !important;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+body {
+    padding-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 50px;
+    }
+}
+
+table td {
+    table-layout: fixed;
+    width: 500px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+input[type="checkbox"]:checked + label {
+    opacity: 0.4; /* Real browsers */
+    filter: alpha(opacity=40); /* MSIE */
+}
